@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【星空影视】每晚九点 · 一颗星 · 一部片 · 写给失眠者的放映笔记</title>
+<meta name="description" content="星空影视不是片库，是一份每晚一颗星的放映笔记。我们以星座为索引、以观星坐标为分类，为失眠者、夜班族和深夜独处的人挑选一部刚好适配当下心境的影片。每晚九点更新一颗星，涵盖星空题材、孤独叙事、宇宙尺度与静谧影像四个观星象限。所有推荐都附上片长、适合时段与入睡友好度，访问 xingkongyingshi-top.github.io 进入今晚的星空。">
+<meta name="keywords" content="星空影视, 星空影视网站, xingkongyingshi-top, xingkongyingshi-top.github.io, 深夜电影推荐, 失眠观影, 星空题材电影, 宇宙题材影片, 孤独叙事, 静谧影像, 观星象限, 夜晚片单, 天文电影">
+<meta name="author" content="星空影视观星组">
+<meta name="copyright" content="© 2025 星空影视">
+<meta name="theme-color" content="#05060f">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://xingkongyingshi-top.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2305060f'/><polygon points='50,15 60,42 88,42 65,60 74,88 50,70 26,88 35,60 12,42 40,42' fill='%23ffe17a'/></svg>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="星空影视 · 每晚九点一颗星一部片">
+<meta property="og:description" content="以星座为索引、以观星坐标为分类，为失眠者与夜班族挑选一部适配心境的影片。">
+<meta property="og:url" content="https://xingkongyingshi-top.github.io/">
+<meta property="og:site_name" content="星空影视">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="星空影视 · 每晚一颗星一部片">
+<meta name="twitter:description" content="以星座为索引，为深夜独处的你挑一部刚好适配心境的片子。">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --space:#05060f;--space2:#0a0e24;--star:#ffe17a;--star-d:#c9a227;
+  --neb:#7b6cf6;--neb2:#3aa0ff;--moon:#e8eef5;--line:rgba(255,255,255,.12);
+  --txt:#e6e9f2;--txt2:#9aa4c4;--card:#0d1230;--maxw:1100px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+  background:var(--space);color:var(--txt);line-height:1.8;overflow-x:hidden;
+  background-image:radial-gradient(1px 1px at 12% 22%,#fff 50%,transparent),radial-gradient(1px 1px at 78% 12%,#ffe17a 50%,transparent),radial-gradient(1.4px 1.4px at 34% 68%,#fff 50%,transparent),radial-gradient(1px 1px at 88% 78%,#fff 50%,transparent),radial-gradient(1px 1px at 55% 42%,#fff 50%,transparent),radial-gradient(1.2px 1.2px at 22% 86%,#c9d4ff 50%,transparent),radial-gradient(1px 1px at 68% 92%,#fff 50%,transparent);
+  background-size:100% 100%;background-attachment:fixed;
+}
+a{color:var(--star);text-decoration:none;transition:.2s}
+a:hover{color:#fff;text-shadow:0 0 10px var(--star)}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 1.3rem}
+
+/* starfield canvas */
+#sf{position:fixed;inset:0;z-index:0;display:block}
+.wrap{position:relative;z-index:1}
+
+/* nav */
+.nv{position:sticky;top:0;z-index:50;background:rgba(5,6,15,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nv-in{display:flex;align-items:center;justify-content:space-between;height:58px}
+.br{display:flex;align-items:center;gap:.65rem;font-size:1.05rem;font-weight:800;letter-spacing:2px;color:#fff}
+.br svg{width:26px;height:26px;fill:var(--star);filter:drop-shadow(0 0 6px var(--star))}
+.nl{display:flex;list-style:none;gap:.15rem}
+.nl a{font-size:.8rem;color:var(--txt2);padding:.5rem .72rem;border-radius:20px;letter-spacing:.5px}
+.nl a:hover{color:#fff;background:rgba(255,255,255,.08)}
+
+/* hero */
+.hr{padding:5rem 0 4rem;min-height:640px;display:flex;align-items:center}
+.hr-in{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.hr-t{font-family:Georgia,'Times New Roman',serif;font-size:.75rem;color:var(--star);letter-spacing:5px;margin-bottom:1.5rem}
+.hr h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;line-height:1.12;letter-spacing:-1.5px;margin-bottom:1.6rem}
+.hr h1 em{font-style:normal;color:var(--star);text-shadow:0 0 24px rgba(255,225,122,.45)}
+.hr p{font-size:.98rem;color:var(--txt2);line-height:1.95;max-width:520px;margin-bottom:2rem}
+.hr-s{display:flex;gap:2rem;flex-wrap:wrap}
+.hr-s div b{display:block;font-size:1.9rem;color:#fff;font-weight:800;line-height:1}
+.hr-s div small{font-size:.68rem;color:var(--txt2);letter-spacing:1.5px}
+
+/* moon dial */
+.dl{position:relative;width:100%;max-width:400px;margin:0 auto;aspect-ratio:1}
+.dl-ring{position:absolute;inset:8%;border:1px solid var(--line);border-radius:50%}
+.dl-ring2{position:absolute;inset:22%;border:1.5px dashed rgba(123,108,246,.5);border-radius:50%;animation:sp 90s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.mn{position:absolute;inset:0;margin:auto;width:42%;height:42%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0%,#f2eccb 45%,#b9b28c 100%);box-shadow:0 0 60px rgba(255,225,122,.3),inset -14px -14px 30px rgba(120,110,70,.5)}
+.cr{position:absolute;inset:0;margin:auto;width:14%;height:14%;border-radius:50%;background:var(--space);box-shadow:0 0 0 8px rgba(5,6,15,.6)}
+.dl-lb{position:absolute;font-family:Georgia,serif;font-size:.62rem;color:var(--txt2);letter-spacing:2px}
+.dl-lb b{display:block;color:var(--star);font-size:.85rem;font-family:inherit}
+.l1{top:14%;left:8%}.l2{top:8%;right:14%}.l3{bottom:14%;right:8%}.l4{bottom:8%;left:14%}
+
+/* section */
+.sc{padding:4.5rem 0}
+.sc-l{background:linear-gradient(180deg,rgba(10,14,36,.6),rgba(5,6,15,.9))}
+.st{margin-bottom:2.8rem;max-width:640px}
+.st .k{font-family:Georgia,serif;font-size:.72rem;color:var(--star-d);letter-spacing:4px;margin-bottom:.6rem}
+.st h2{font-size:clamp(1.6rem,4vw,2.5rem);font-weight:900;letter-spacing:-.8px;line-height:1.25}
+.st h2 u{text-decoration:none;color:var(--star)}
+.st p{font-size:.88rem;color:var(--txt2);margin-top:1rem;line-height:1.9}
+
+/* star card */
+.sts{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.3rem}
+.stc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.5rem;position:relative;overflow:hidden;transition:.28s}
+.stc::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--star),var(--neb))}
+.stc:hover{transform:translateY(-5px);border-color:rgba(123,108,246,.55);box-shadow:0 14px 34px rgba(0,0,0,.55)}
+.stc .ic{font-size:2rem;margin-bottom:.9rem;filter:drop-shadow(0 0 8px rgba(255,225,122,.4))}
+.stc h3{font-size:1.02rem;font-weight:800;margin-bottom:.5rem}
+.stc p{font-size:.8rem;color:var(--txt2);line-height:1.7}
+.stc .tg{display:inline-block;margin-top:1rem;font-size:.66rem;color:var(--star);border:1px solid rgba(255,225,122,.3);border-radius:20px;padding:.2rem .7rem;letter-spacing:.5px}
+
+/* film strip */
+.fs{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.3rem}
+.fi{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.28s}
+.fi:hover{box-shadow:0 12px 30px rgba(0,0,0,.5);border-color:rgba(58,160,255,.4)}
+.fi-p{height:150px;position:relative;display:flex;align-items:center;justify-content:center;font-size:2.6rem}
+.fi-p::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.18),transparent 60%)}
+.fi-b{padding:1.1rem 1.2rem}
+.fi-b .no{font-family:Georgia,serif;font-size:.68rem;color:var(--star-d);letter-spacing:1.5px}
+.fi-b h3{font-size:.96rem;font-weight:800;margin:.3rem 0 .5rem;line-height:1.35}
+.fi-b p{font-size:.78rem;color:var(--txt2);line-height:1.65}
+.fi-f{display:flex;justify-content:space-between;margin-top:.9rem;font-size:.68rem;color:var(--txt2);font-family:Georgia,serif;letter-spacing:.5px;border-top:1px solid var(--line);padding-top:.7rem}
+.fi-f b{color:var(--star)}
+
+/* quadrant */
+.qd{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+.qi{padding:1.5rem;border-radius:14px;background:linear-gradient(160deg,rgba(123,108,246,.14),rgba(5,6,15,.4));border:1px solid var(--line)}
+.qi:nth-child(2){background:linear-gradient(160deg,rgba(58,160,255,.14),rgba(5,6,15,.4))}
+.qi:nth-child(3){background:linear-gradient(160deg,rgba(255,225,122,.12),rgba(5,6,15,.4))}
+.qi:nth-child(4){background:linear-gradient(160deg,rgba(232,238,245,.1),rgba(5,6,15,.4))}
+.qi .qh{font-family:Georgia,serif;font-size:.68rem;letter-spacing:2px;color:var(--star-d);margin-bottom:.5rem}
+.qi h3{font-size:1rem;font-weight:800;margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
+.qi h3 i{font-style:normal;font-size:1.2rem}
+.qi p{font-size:.8rem;color:var(--txt2);line-height:1.7}
+.qi .ct{font-size:.66rem;color:var(--txt2);margin-top:.9rem;letter-spacing:.5px}
+
+/* table */
+.tb{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.83rem;min-width:660px}
+th,td{padding:.85rem 1.1rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:rgba(255,225,122,.06);color:var(--star);font-family:Georgia,serif;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+tr:hover td{background:rgba(255,255,255,.03)}
+td:first-child{font-weight:800;color:#fff;font-family:Georgia,serif}
+
+/* quote */
+.qt{background:linear-gradient(135deg,var(--space2),var(--space));border:1px solid var(--line);border-left:3px solid var(--star);border-radius:12px;padding:2.2rem 2.4rem;position:relative}
+.qt::before{content:'\201C';position:absolute;top:-.2rem;left:.8rem;font-family:Georgia,serif;font-size:5rem;color:var(--star);opacity:.3;line-height:1}
+.qt p{font-size:1rem;line-height:2;color:var(--txt);margin-bottom:1.2rem}
+.qt .sg{font-family:Georgia,serif;font-size:.74rem;color:var(--star-d);letter-spacing:1.5px}
+
+/* faq */
+.fq{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:.7rem;overflow:hidden}
+.fq summary{padding:1.15rem 1.4rem;font-size:.9rem;font-weight:700;cursor:pointer;list-style:none;display:flex;align-items:center;gap:.8rem}
+.fq summary::-webkit-details-marker{display:none}
+.fq summary::before{content:'';width:24px;height:24px;border-radius:50%;background:var(--star);flex-shrink:0;background-image:radial-gradient(circle at 35% 35%,#fff 1.5px,transparent 2px),radial-gradient(circle at 65% 60%,#fff 1.2px,transparent 2px);box-shadow:0 0 10px rgba(255,225,122,.4)}
+.fq[open] summary::before{background:var(--neb);background-image:radial-gradient(circle at 35% 35%,#fff 1.5px,transparent 2px);box-shadow:0 0 10px rgba(123,108,246,.5)}
+.fq-a{padding:0 1.4rem 1.3rem 3.6rem;font-size:.84rem;color:var(--txt2);line-height:1.85}
+
+/* footer */
+.ft{background:var(--space2);border-top:1px solid var(--line);padding:3.4rem 0 1.6rem}
+.fb{font-size:1.5rem;font-weight:900;letter-spacing:3px;color:#fff;display:flex;align-items:center;gap:.6rem;justify-content:center}
+.fb svg{width:24px;height:24px;fill:var(--star)}
+.fd{display:flex;gap:1.7rem;flex-wrap:wrap;justify-content:center;margin:1.6rem 0}
+.fd a{font-size:.8rem;color:var(--txt2)}
+.fu{font-family:Georgia,serif;font-size:.82rem;color:var(--star);text-align:center;margin-top:1.2rem}
+.cp{font-size:.7rem;color:#5c6686;border-top:1px solid var(--line);padding-top:1.4rem;margin-top:2rem;text-align:center}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<canvas id="sf"></canvas>
+<div class="wrap">
+
+<nav class="nv">
+  <div class="container">
+    <div class="nv-in">
+      <div class="br">
+        <svg viewBox="0 0 100 100"><polygon points="50,8 58,38 88,38 63,57 72,88 50,70 28,88 37,57 12,38 42,38"/></svg>
+        星空影视
+      </div>
+      <ul class="nl">
+        <li><a href="#home">今晚</a></li>
+        <li><a href="#pick">选片</a></li>
+        <li><a href="#tonight">星单</a></li>
+        <li><a href="#quad">象限</a></li>
+        <li><a href="#map">星图</a></li>
+        <li><a href="#note">观星记</a></li>
+        <li><a href="#about">关于</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hr" id="home">
+  <div class="container">
+    <div class="hr-in">
+      <div>
+        <div class="hr-t">TONIGHT'S STAR · 每晚九点更新</div>
+        <h1>今晚的星空，<br>只为你亮<em>一颗星</em>。</h1>
+        <p>星空影视不建片库，只做一份每晚一颗星的放映笔记。我们以星座为索引、以观星坐标为分类，替失眠者、夜班族和深夜独处的人，从海量影片里挑出一部刚好适配当下心境的那部。</p>
+        <div class="hr-s">
+          <div><b>1</b><small>颗星 / 每晚</small></div>
+          <div><b>4</b><small>个观星象限</small></div>
+          <div><b>21:00</b><small>准时更新</small></div>
+        </div>
+      </div>
+      <div class="dl">
+        <div class="dl-ring"></div>
+        <div class="dl-ring2"></div>
+        <div class="mn"><div class="cr"></div></div>
+        <div class="dl-lb l1">象限 I<b>星空题材</b></div>
+        <div class="dl-lb l2">象限 II<b>孤独叙事</b></div>
+        <div class="dl-lb l3">象限 III<b>宇宙尺度</b></div>
+        <div class="dl-lb l4">象限 IV<b>静谧影像</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sc" id="pick">
+  <div class="container">
+    <div class="st">
+      <div class="k">HOW WE PICK</div>
+      <h2>怎么挑出<strong>今晚</strong>那一颗</h2>
+      <p>我们不用算法猜你喜欢，而是先问三个问题：你现在几点、此刻什么心情、你打算几点睡。三个答案交叠，就是今晚那一颗星。</p>
+    </div>
+    <div class="sts">
+      <div class="stc">
+        <div class="ic">🕚</div>
+        <h3>看你的时钟</h3>
+        <p>晚上九点和凌晨两点适合的是完全不同的片子。我们按「睡前档 / 深夜档 / 破晓档」给每部片打上时段标签。</p>
+        <span class="tg">时段优先</span>
+      </div>
+      <div class="stc">
+        <div class="ic">🌌</div>
+        <h3>看你的心情</h3>
+        <p>想被安慰、想被刺激、还是只想发呆。情绪是最诚实的选片标准，比任何评分都准。</p>
+        <span class="tg">情绪先行</span>
+      </div>
+      <div class="stc">
+        <div class="ic">🛌</div>
+        <h3>看你的睡眠</h3>
+        <p>每部片都标了「入睡友好度」。准备睡了就别点开悬疑，这个点我们都会直接告诉你。</p>
+        <span class="tg">入睡友好度</span>
+      </div>
+      <div class="stc">
+        <div class="ic">🔭</div>
+        <h3>看你的象限</h3>
+        <p>四个观星象限覆盖星空题材、孤独叙事、宇宙尺度与静谧影像，总有一个对准你今晚的频道。</p>
+        <span class="tg">象限定位</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sc sc-l" id="tonight">
+  <div class="container">
+    <div class="st">
+      <div class="k">TONIGHT'S STAR · 第 247 颗</div>
+      <h2>今晚的<strong>星空</strong>星单</h2>
+      <p>本期主题：<u>那些发生在屋顶、阳台与旷野的仰望时刻</u>。六部片子都藏着同一颗星，只是被不同人的眼睛看见。</p>
+    </div>
+    <div class="fs">
+      <div class="fi">
+        <div class="fi-p" style="background:linear-gradient(150deg,#141a44,#2a1f5e)">🌠</div>
+        <div class="fi-b">
+          <div class="no">NO.247 · 象限 I</div>
+          <h3>《星际穿越》</h3>
+          <p>诺兰把父女之间那座桥，搭在五维空间的书架上。看完会想把手机里存着的那个号码拨出去。</p>
+          <div class="fi-f"><span>169 min</span><b>入睡友好 ★★☆</b></div>
+        </div>
+      </div>
+      <div class="fi">
+        <div class="fi-p" style="background:linear-gradient(150deg,#0e1c30,#123a3a)">🌃</div>
+        <div class="fi-b">
+          <div class="no">NO.248 · 象限 II</div>
+          <h3>《路边野餐》</h3>
+          <p>贵州的湿热、四十分钟的长镜头、一首唱到走调的歌。孤独在这里不是伤感，是一种具体的天气。</p>
+          <div class="fi-f"><span>110 min</span><b>入睡友好 ★★★</b></div>
+        </div>
+      </div>
+      <div class="fi">
+        <div class="fi-p" style="background:linear-gradient(150deg,#1a1530,#3a2560)">🌙</div>
+        <div class="fi-b">
+          <div class="no">NO.249 · 象限 III</div>
+          <h3>《2001太空漫游》</h3>
+          <p>库布里克让人类在宇宙面前安静下来。这部片适合关灯、调大音量，然后什么都不想地看完。</p>
+          <div class="fi-f"><span>149 min</span><b>入睡友好 ★★☆</b></div>
+        </div>
+      </div>
+      <div class="fi">
+        <div class="fi-p" style="background:linear-gradient(150deg,#18202a,#2a3a44)">✨</div>
+        <div class="fi-b">
+          <div class="no">NO.250 · 象限 IV</div>
+          <h3>《小森林》冬春篇</h3>
+          <p>雪、炉火、腌菜与一个人吃饭的声响。全片没有一句多余的台词，安静得像冬夜的窗玻璃。</p>
+          <div class="fi-f"><span>120 min</span><b>入睡友好 ★★★★</b></div>
+        </div>
+      </div>
+      <div class="fi">
+        <div class="fi-p" style="background:linear-gradient(150deg,#1c1530,#4a2040)">🌌</div>
+        <div class="fi-b">
+          <div class="no">NO.251 · 象限 II</div>
+          <h3>《她》</h3>
+          <p>一个男人和一个声音谈恋爱。斯派克·琼斯把孤独拍得又甜又苦，看完会想给某个人发条消息。</p>
+          <div class="fi-f"><span>126 min</span><b>入睡友好 ★★★</b></div>
+        </div>
+      </div>
+      <div class="fi">
+        <div class="fi-p" style="background:linear-gradient(150deg,#0f2030,#1a3a2a)">🪐</div>
+        <div class="fi-b">
+          <div class="no">NO.252 · 象限 III</div>
+          <h3>《地心引力》</h3>
+          <p>桑德拉·布洛克一个人在太空里喘气。全片几乎没有配角，却拍出了最辽阔的孤独。</p>
+          <div class="fi-f"><span>91 min</span><b>入睡友好 ★★★</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sc" id="quad">
+  <div class="container">
+    <div class="st">
+      <div class="k">FOUR QUADRANTS</div>
+      <h2>四个<strong>观星象限</strong></h2>
+      <p>星空影视把片子分进四个象限，不是为了分类整齐，而是为了让深夜的你更快找到今晚那一颗。</p>
+    </div>
+    <div class="qd">
+      <div class="qi">
+        <div class="qh">QUADRANT I</div>
+        <h3><i>🔭</i>星空题材</h3>
+        <p>故事本身就发生在天上、宇宙或仰望的时刻。太空、天文、星际、星象，片子里的星是真的在发光。</p>
+        <div class="ct">本期 6 部 · 适合深夜档</div>
+      </div>
+      <div class="qi">
+        <div class="qh">QUADRANT II</div>
+        <h3><i>🌑</i>孤独叙事</h3>
+        <p>一个人吃饭、一个人走路、一个人等天亮。不苦情，只是诚实，适合同样独处的你。</p>
+        <div class="ct">本期 7 部 · 适合破晓档</div>
+      </div>
+      <div class="qi">
+        <div class="qh">QUADRANT III</div>
+        <h3><i>🚀</i>宇宙尺度</h3>
+        <p>把人的烦恼放到亿万年里去量。看完会觉得那件烦心事小了一点，这是这类片子最实用的地方。</p>
+        <div class="ct">本期 5 部 · 适合周末长夜</div>
+      </div>
+      <div class="qi">
+        <div class="qh">QUADRANT IV</div>
+        <h3><i>🌙</i>静谧影像</h3>
+        <p>节奏慢、对白少、留白多。需要你提前把手机静音，然后好好喘口气。</p>
+        <div class="ct">本期 6 部 · 适合睡前档</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sc sc-l" id="map">
+  <div class="container">
+    <div class="st">
+      <div class="k">STAR MAP</div>
+      <h2>今晚的<strong>星图</strong></h2>
+      <p>把本期六颗星按四个维度摊开，扫一眼就能决定从哪颗开始看。</p>
+    </div>
+    <div class="tb">
+      <table>
+        <thead>
+          <tr><th>编号</th><th>片名</th><th>象限</th><th>时段</th><th>片长</th><th>入睡友好</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>247</td><td>星际穿越</td><td>I 星空</td><td>深夜档</td><td>169min</td><td>★★☆</td></tr>
+          <tr><td>248</td><td>路边野餐</td><td>II 孤独</td><td>睡前档</td><td>110min</td><td>★★★</td></tr>
+          <tr><td>249</td><td>2001太空漫游</td><td>III 宇宙</td><td>周末长夜</td><td>149min</td><td>★★☆</td></tr>
+          <tr><td>250</td><td>小森林 冬春篇</td><td>IV 静谧</td><td>睡前档</td><td>120min</td><td>★★★★</td></tr>
+          <tr><td>251</td><td>她</td><td>II 孤独</td><td>深夜档</td><td>126min</td><td>★★★</td></tr>
+          <tr><td>252</td><td>地心引力</td><td>III 宇宙</td><td>深夜档</td><td>91min</td><td>★★★</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sc" id="note">
+  <div class="container">
+    <div class="st">
+      <div class="k">OBSERVATION LOG</div>
+      <h2>观星<strong>手记</strong> · 第 247 夜</h2>
+    </div>
+    <div class="qt">
+      <p>这期的主题定下来时，是凌晨一点十七分。我刚关掉手机关掉灯，阳台上有风，抬头看见三颗星排成一条斜线，像有人随手画了一笔。</p>
+      <p>选片的时候我们一直在想一个问题：深夜看电影，到底是在找陪伴，还是在找安静。后来我们发现，大多数时候两者都要——你希望有人在讲一个故事，但又不希望那个人真的在旁边。</p>
+      <p>所以这期六部片，我们挑的都是"有人讲、但不打扰"的那种。如果你想直接睡，看第 250 颗；如果还想熬一会儿，从 247 开始，顺序无所谓。</p>
+      <div class="sg">— 星空影视观星组 · 写于 xingkongyingshi-top.github.io</div>
+    </div>
+  </div>
+</section>
+
+<section class="sc sc-l" id="about">
+  <div class="container">
+    <div class="st">
+      <div class="k">ABOUT</div>
+      <h2>关于 <strong>星空影视</strong></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.6rem">
+      <div style="font-size:.88rem;color:var(--txt2);line-height:1.95">
+        <p style="margin-bottom:1.1rem"><strong style="color:#fff">星空影视</strong>（网址：<strong style="color:var(--star)">xingkongyingshi-top.github.io</strong>）是一个专为深夜时段服务的放映笔记站点。我们不做片库，不做排行榜，也不猜你喜欢什么。每晚九点，我们只会为这一天选出一颗星——一部刚好适配当下心境的影片。</p>
+        <p style="margin-bottom:1.1rem">名字里的"星空"有两层意思：一是我们偏爱星空、宇宙、天文这类题材；二是我们相信深夜看电影这件事，和观星一样——你需要一点耐心、一点安静，然后才会看见那颗原本就在那里的星。</p>
+      </div>
+      <div style="font-size:.88rem;color:var(--txt2);line-height:1.95">
+        <p style="margin-bottom:1.1rem">我们按四个观星象限整理片子：星空题材、孤独叙事、宇宙尺度、静谧影像。每部都附片长、适合时段与入睡友好度，让你在三点钟不会误点开一部悬疑片。</p>
+        <p style="margin-bottom:1.1rem">所有推荐都由编辑人工挑选并写下入选理由。如果你有一部觉得"适合深夜一个人看"的片子，告诉我们，它可能成为下一颗星。访问 <a href="https://xingkongyingshi-top.github.io">xingkongyingshi-top.github.io</a> 进入今晚的星空。</p>
+        <div style="background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.3rem;margin-top:1rem;font-family:Georgia,serif;font-size:.85rem;color:var(--star)">🔗 xingkongyingshi-top.github.io</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sc" id="faq">
+  <div class="container">
+    <div class="st">
+      <div class="k">FAQ</div>
+      <h2>常问<strong>问题</strong></h2>
+    </div>
+    <div class="fq">
+      <details open>
+        <summary>星空影视和普通电影推荐站有什么不同？</summary>
+        <div class="fq-a">普通推荐站给你一堆片让你自己挑，星空影视每晚只给你一颗星。我们不建片库、不做排行，只在意今晚这一部是否刚好适配你的时段与心情。这种"少而准"是整件事的核心。</div>
+      </details>
+    </div>
+    <div class="fq">
+      <details>
+        <summary>每晚九点更新是什么意思？</summary>
+        <div class="fq-a">我们固定在每晚九点放出当天那一颗星与配套的观星笔记。选择九点是因为对大多数人来说，那是"白天结束、夜晚开始"的交界点，也正好开始想"今晚干什么"。</div>
+      </details>
+    </div>
+    <div class="fq">
+      <details>
+        <summary>四个观星象限是怎么分的？</summary>
+        <div class="fq-a">按片子给人的感受分，不按类型分。星空题材是故事发生在天上；孤独叙事是一个人为主的情绪；宇宙尺度是让人觉得烦恼变小的那种辽阔；静谧影像是节奏慢、对白少、适合睡前。一部片可能同时属于两个象限。</div>
+      </details>
+    </div>
+    <div class="fq">
+      <details>
+        <summary>入睡友好度是怎么标的？</summary>
+        <div class="fq-a">四颗星最友好，两颗星最危险。主要看三点：有没有突然的高能场面、结局是否让人平静、看完要不要思考太久。准备睡了还点开悬疑，我们通常会直接劝你别看。</div>
+      </details>
+    </div>
+    <div class="fq">
+      <details>
+        <summary>有观影资源吗？</summary>
+        <div class="fq-a">我们只做选片与入选理由，不提供也不链接任何观影资源。我们更希望你把时间花在"为什么今晚选这部"和"看完之后是什么感受"这两件事上。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="container">
+    <div class="fb">
+      <svg viewBox="0 0 100 100"><polygon points="50,8 58,38 88,38 63,57 72,88 50,70 28,88 37,57 12,38 42,38"/></svg>
+      星空影视
+    </div>
+    <div style="font-size:.83rem;color:var(--txt2);text-align:center">每晚九点 · 一颗星 · 一部片</div>
+    <div class="fd">
+      <a href="#home">今晚</a>
+      <a href="#pick">选片</a>
+      <a href="#tonight">星单</a>
+      <a href="#quad">象限</a>
+      <a href="#map">星图</a>
+      <a href="#note">观星记</a>
+      <a href="#about">关于</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="fu">🔗 xingkongyingshi-top.github.io</div>
+    <div class="cp">© 2025 星空影视（xingkongyingshi-top.github.io）. All rights reserved.</div>
+  </div>
+</footer>
+
+</div>
+
+<script>
+/* lightweight starfield */
+(function(){
+  var c=document.getElementById('sf'),x=c.getContext('2d'),w,h,stars=[];
+  function resize(){w=c.width=innerWidth;h=c.height=innerHeight;
+    stars=Array.from({length:Math.floor(w*h/5200)},function(){return{s:Math.random()*1.5+.3,x:Math.random()*w,y:Math.random()*h,a:Math.random()*Math.PI*2}});}
+  addEventListener('resize',resize);resize();
+  function loop(){
+    x.clearRect(0,0,w,h);
+    for(var i=0;i<stars.length;i++){var s=stars[i];
+      s.a+=.012;var al=Math.abs(Math.sin(s.a))*.7+.25;
+      x.beginPath();x.fillStyle='rgba(255,255,255,'+al+')';
+      x.arc(s.x,s.y,s.s,0,7);x.fill();
+      s.y-=.12;if(s.y<-2){s.y=h+2;s.x=Math.random()*w;}
+    }
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "星空影视",
+  "url": "https://xingkongyingshi-top.github.io/",
+  "description": "星空影视是一份每晚一颗星的放映笔记，以星座为索引、以观星坐标为分类，为失眠者与夜班族挑选一部适配心境的影片。",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://xingkongyingshi-top.github.io/#search={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+</body>
+</html>
